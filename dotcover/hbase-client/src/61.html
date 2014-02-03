@@ -1,42 +1,14 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<script type="text/javascript" src="../js/coverreport.js">
-
-		</script><script type="text/javascript">
-			RANGES_61 = [
-   [51,8,51,9,'dcuc']
-, [51,10,51,52,'dcuc']
-, [51,53,51,54,'dcuc']
-, [52,8,52,9,'dcuc']
-, [52,10,52,44,'dcuc']
-, [52,45,52,46,'dcuc']
-, [64,8,64,9,'dcuc']
-, [64,10,64,50,'dcuc']
-, [64,51,64,52,'dcuc']
-, [65,8,65,9,'dcuc']
-, [65,10,65,42,'dcuc']
-, [65,43,65,44,'dcuc']
-, [77,8,77,9,'dcuc']
-, [77,10,77,47,'dcuc']
-, [77,48,77,49,'dcuc']
-, [78,8,78,9,'dcuc']
-, [78,10,78,40,'dcuc']
-, [78,41,78,42,'dcuc']
-, [92,8,92,9,'dcuc']
-, [92,10,92,68,'dcuc']
-, [92,69,92,70,'dcuc']
-, [93,8,93,9,'dcuc']
-, [93,10,93,35,'dcuc']
-, [93,36,93,37,'dcuc']
-, [101,3,101,4,'dcuc']
-, [102,4,109,69,'dcuc']
-, [109,95,110,6,'dcuc']
-, [111,3,111,4,'dcuc']
-, [109,69,109,95,'dcuc']
-];
-		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
-	</head><body>
-		<code id="src61" class="dotCoverSource"><pre>#region FreeBSD
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>c:\projects\github\wesam18\hbase-client\src\hbase.stargate.client\config\configcellquery.cs</title>
+    <script type="text/javascript" src="../js/dotcover.sourceview.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/dotcover.report.css" />
+  </head>
+  <body>
+    <pre id="content" class="source-code">
+#region FreeBSD
 
 // Copyright (c) 2013, The Tribe
 // All rights reserved.
@@ -71,7 +43,7 @@ namespace HBase.Stargate.Client.Config
 	{
 		private const string _beginTimestampName = &quot;beginTimestamp&quot;;
 		private const string _endTimestampName = &quot;endTimestamp&quot;;
-		private const string _maxResultsName = &quot;maxResults&quot;;
+		private const string _maxVersionsName = &quot;maxVersions&quot;;
 		private const string _cellsName = &quot;filters&quot;;
 		private const string _addCellName = &quot;filter&quot;;
 		private const string _removeCellName = &quot;remove&quot;;
@@ -104,16 +76,16 @@ namespace HBase.Stargate.Client.Config
 		}
 
 		/// &lt;summary&gt;
-		///    Gets or sets the max results.
+		///    Gets or sets the max versions.
 		/// &lt;/summary&gt;
 		/// &lt;value&gt;
-		///    The max results.
+		///    The max versions.
 		/// &lt;/value&gt;
-		[ConfigurationProperty(_endTimestampName, IsRequired = false)]
-		public int? MaxResults
+		[ConfigurationProperty(_maxVersionsName, IsRequired = false)]
+		public int? MaxVersions
 		{
-			get { return this[_maxResultsName] as int?; }
-			set { this[_maxResultsName] = value; }
+			get { return this[_maxVersionsName] as int?; }
+			set { this[_maxVersionsName] = value; }
 		}
 
 		/// &lt;summary&gt;
@@ -143,13 +115,15 @@ namespace HBase.Stargate.Client.Config
 				Row = query.Row,
 				BeginTimestamp = query.BeginTimestamp,
 				EndTimestamp = query.EndTimestamp,
-				MaxResults = query.MaxResults,
+				MaxVersions = query.MaxVersions,
 				Cells = query.Cells.Cast&lt;ConfigCellDescriptor&gt;().Select(cell =&gt; (HBaseCellDescriptor) cell)
 			};
 		}
 	}
-}</pre></code><script type="text/javascript">
-			applyranges('src61', RANGES_61)
-		</script>
-	</body>
+}
+    </pre>
+    <script type="text/javascript">
+      highlightRanges([[51,8,51,9,0],[51,10,51,52,0],[51,53,51,54,0],[52,8,52,9,0],[52,10,52,44,0],[52,45,52,46,0],[64,8,64,9,0],[64,10,64,50,0],[64,51,64,52,0],[65,8,65,9,0],[65,10,65,42,0],[65,43,65,44,0],[77,8,77,9,0],[77,10,77,48,0],[77,49,77,50,0],[78,8,78,9,0],[78,10,78,41,0],[78,42,78,43,0],[92,8,92,9,0],[92,10,92,68,0],[92,69,92,70,0],[93,8,93,9,0],[93,10,93,35,0],[93,36,93,37,0],[101,3,101,4,0],[102,4,109,69,0],[109,95,110,6,0],[111,3,111,4,0],[109,69,109,95,0]]);
+    </script>
+  </body>
 </html>

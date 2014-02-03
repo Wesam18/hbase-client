@@ -1,42 +1,14 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<script type="text/javascript" src="../js/coverreport.js">
-
-		</script><script type="text/javascript">
-			RANGES_2 = [
-   [7,2,7,147,'dccv']
-, [9,1,9,34,'dccv']
-, [6,1,6,26,'dccv']
-, [10,2,10,191,'dccv']
-, [11,2,11,116,'dccv']
-, [12,2,12,184,'dccv']
-, [20,1,20,34,'dccv']
-, [6,1,6,26,'dccv']
-, [21,2,21,169,'dccv']
-, [22,2,22,118,'dccv']
-, [23,2,23,190,'dccv']
-, [31,1,31,34,'dccv']
-, [6,1,6,26,'dccv']
-, [32,2,32,115,'dccv']
-, [33,2,33,115,'dccv']
-, [36,2,36,115,'dccv']
-, [39,2,39,115,'dccv']
-, [42,2,42,115,'dccv']
-, [45,2,45,124,'dccv']
-, [46,2,47,97,'dccv']
-, [48,1,48,34,'dccv']
-, [6,1,6,26,'dccv']
-, [49,2,49,162,'dccv']
-, [50,2,50,126,'dccv']
-, [51,2,51,113,'dccv']
-, [52,2,52,119,'dccv']
-, [55,2,55,119,'dccv']
-, [58,2,58,119,'dccv']
-, [61,2,61,119,'dccv']
-];
-		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
-	</head><body>
-		<code id="src2" class="dotCoverSource"><pre>Feature: HBase JSON
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>c:\projects\github\wesam18\hbase-client\src\_specs\features\hbasejson.feature</title>
+    <script type="text/javascript" src="../js/dotcover.sourceview.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/dotcover.report.css" />
+  </head>
+  <body>
+    <pre id="content" class="source-code">
+Feature: HBase JSON
 	In order to work with HBase content in the JSON format
 	As an application developer
 	I want to be able to create and parse HBase JSON content using basic information
@@ -98,8 +70,10 @@ Scenario: Parse JSON for a set of cells
 		| 1   | alpha  |           | 4         | hello world |
 	And one of the cells in my set should have the following properties:
 		| row | column | qualifier | timestamp | value       |
-		| 1   | alpha  | x         | 4         | hello world |</pre></code><script type="text/javascript">
-			applyranges('src2', RANGES_2)
-		</script>
-	</body>
+		| 1   | alpha  | x         | 4         | hello world |
+    </pre>
+    <script type="text/javascript">
+      highlightRanges([[7,2,7,147,1],[9,1,9,34,1],[6,1,6,26,1],[10,2,10,191,1],[11,2,11,116,1],[12,2,12,184,1],[20,1,20,34,1],[6,1,6,26,1],[21,2,21,169,1],[22,2,22,118,1],[23,2,23,190,1],[31,1,31,34,1],[6,1,6,26,1],[32,2,32,115,1],[33,2,33,115,1],[36,2,36,115,1],[39,2,39,115,1],[42,2,42,115,1],[45,2,45,124,1],[46,2,47,97,1],[48,1,48,34,1],[6,1,6,26,1],[49,2,49,162,1],[50,2,50,126,1],[51,2,51,113,1],[52,2,52,119,1],[55,2,55,119,1],[58,2,58,119,1],[61,2,61,119,1]]);
+    </script>
+  </body>
 </html>

@@ -25,46 +25,25 @@ $(document).ready(function() {
           </li>
           <li class="file">
             <a href="HBaseJson.html">HBase JSON</a>
-            <span class="float-right">
-              <i class="icon-warning-sign inconclusive" title="Inconclusive"> </i>
-            </span>
           </li>
           <li class="file">
             <a href="HBaseProtocolBuffers.html">HBase Protocol Buffers (protobuf)</a>
-            <span class="float-right">
-              <i class="icon-warning-sign inconclusive" title="Inconclusive"> </i>
-            </span>
           </li>
           <li class="file">
             <a href="HBaseStargateClient.html">HBase Stargate Client</a>
-            <span class="float-right">
-              <i class="icon-ok passed" title="Successful"> </i>
-            </span>
           </li>
           <li class="file">
             <span class="current">HBase Stargate Resource Builder</span>
-            <span class="float-right">
-              <i class="icon-ok passed" title="Successful"> </i>
-            </span>
           </li>
           <li class="file">
             <a href="HBaseXml.html">HBase XML</a>
-            <span class="float-right">
-              <i class="icon-ok passed" title="Successful"> </i>
-            </span>
           </li>
           <li class="file">
             <a href="IdentifierMatching.html">Identifier Matching</a>
-            <span class="float-right">
-              <i class="icon-ok passed" title="Successful"> </i>
-            </span>
           </li>
         </ul>
       </div>
       <div id="feature">
-        <div class="float-right">
-          <i class="icon-ok passed" title="Successful"> </i>
-        </div>
         <h1>HBase Stargate Resource Builder</h1>
         <div class="description">
           <p>In order to avoid using the wrong resource URI for a particular operation
@@ -73,9 +52,6 @@ I want to be sure that the resource URI is correct for every situation</p>
         </div>
         <ul id="scenarios">
           <li class="scenario">
-            <div class="float-right">
-              <i class="icon-warning-sign inconclusive" title="Inconclusive"> </i>
-            </div>
             <div class="scenario-heading">
               <h2></h2>
             </div>
@@ -87,16 +63,13 @@ I want to be sure that the resource URI is correct for every situation</p>
             </div>
           </li>
           <li class="scenario">
-            <div class="float-right">
-              <i class="icon-ok passed" title="Successful"> </i>
-            </div>
             <div class="scenario-heading">
               <h2>Cell or Row query</h2>
             </div>
             <div class="steps">
               <ul>
                 <li class="step">
-                  <span class="keyword">Given </span>I have a cell query consisting of a &lt;table&gt;, a &lt;row&gt;, a &lt;column&gt;, a &lt;qualifier&gt;, a &lt;begin&gt; timestamp, a &lt;end&gt; timestamp, and a &lt;max&gt; number of results</li>
+                  <span class="keyword">Given </span>I have a cell query consisting of a &lt;table&gt;, a &lt;row&gt;, a &lt;column&gt;, a &lt;qualifier&gt;, a &lt;begin&gt; timestamp, a &lt;end&gt; timestamp, and a &lt;max&gt; number of versions</li>
                 <li class="step">
                   <span class="keyword">When </span>I build a resource name for Cell or Row queries using my query</li>
                 <li class="step">
@@ -1801,9 +1774,6 @@ I want to be sure that the resource URI is correct for every situation</p>
             </div>
           </li>
           <li class="scenario">
-            <div class="float-right">
-              <i class="icon-ok passed" title="Successful"> </i>
-            </div>
             <div class="scenario-heading">
               <h2>Single value storage</h2>
             </div>
@@ -2201,9 +2171,6 @@ I want to be sure that the resource URI is correct for every situation</p>
             </div>
           </li>
           <li class="scenario">
-            <div class="float-right">
-              <i class="icon-ok passed" title="Successful"> </i>
-            </div>
             <div class="scenario-heading">
               <h2>Write multiple values</h2>
             </div>
@@ -2259,9 +2226,6 @@ I want to be sure that the resource URI is correct for every situation</p>
             </div>
           </li>
           <li class="scenario">
-            <div class="float-right">
-              <i class="icon-ok passed" title="Successful"> </i>
-            </div>
             <div class="scenario-heading">
               <h2>Delete an item</h2>
             </div>
@@ -2661,8 +2625,9 @@ I want to be sure that the resource URI is correct for every situation</p>
         </ul>
       </div>
       <div id="footer">
-        <p>Pickled on: 14 January 2014 10:33:24</p>
-        <p>Produced by Pickles, version 0.11.0.0</p>
+        <p>Test results generated for: hbase-client, version 1.0.0</p>
+        <p>Pickled on: 3 February 2014 01:02:56</p>
+        <p>Produced by Pickles, version 0.13.1.0</p>
       </div>
     </div>
   </body>

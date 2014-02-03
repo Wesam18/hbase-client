@@ -1,109 +1,14 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<script type="text/javascript" src="../js/coverreport.js">
-
-		</script><script type="text/javascript">
-			RANGES_6 = [
-   [7,2,8,69,'dccv']
-, [10,2,10,142,'dccv']
-, [11,2,11,104,'dccv']
-, [13,1,13,34,'dccv']
-, [6,1,6,26,'dccv']
-, [14,2,14,119,'dccv']
-, [15,2,15,149,'dccv']
-, [16,2,16,159,'dccv']
-, [17,2,17,122,'dccv']
-, [18,2,18,150,'dccv']
-, [19,2,20,2,'dccv']
-, [20,2,20,176,'dccv']
-, [21,2,21,178,'dccv']
-, [30,1,30,34,'dccv']
-, [6,1,6,26,'dccv']
-, [31,2,31,215,'dccv']
-, [32,2,32,137,'dccv']
-, [33,2,33,187,'dccv']
-, [34,2,34,127,'dccv']
-, [35,2,35,160,'dccv']
-, [43,1,43,34,'dccv']
-, [6,1,6,26,'dccv']
-, [44,2,44,138,'dccv']
-, [45,2,45,114,'dccv']
-, [50,2,50,108,'dccv']
-, [51,2,51,125,'dccv']
-, [54,2,54,128,'dccv']
-, [55,2,55,122,'dccv']
-, [61,1,61,34,'dccv']
-, [6,1,6,26,'dccv']
-, [62,2,63,2,'dccv']
-, [63,111,63,183,'dccv']
-, [63,2,63,111,'dccv']
-, [64,2,64,187,'dccv']
-, [100,1,100,34,'dccv']
-, [6,1,6,26,'dccv']
-, [101,2,101,197,'dccv']
-, [102,2,102,125,'dccv']
-, [103,2,103,187,'dccv']
-, [109,1,109,34,'dccv']
-, [6,1,6,26,'dccv']
-, [110,2,111,2,'dccv']
-, [111,124,111,134,'dccv']
-, [111,2,111,124,'dccv']
-, [112,2,112,121,'dccv']
-, [116,1,116,34,'dccv']
-, [6,1,6,26,'dccv']
-, [117,2,118,2,'dccv']
-, [118,2,118,125,'dccv']
-, [119,2,119,125,'dccv']
-, [122,2,122,146,'dccv']
-, [124,1,124,34,'dccv']
-, [6,1,6,26,'dccv']
-, [125,2,125,142,'dccv']
-, [126,2,127,2,'dccv']
-, [127,116,127,132,'dccv']
-, [127,2,127,116,'dccv']
-, [128,2,128,125,'dccv']
-, [131,2,131,119,'dccv']
-, [135,1,135,34,'dccv']
-, [6,1,6,26,'dccv']
-, [136,2,136,142,'dccv']
-, [137,2,137,104,'dccv']
-, [138,2,138,125,'dccv']
-, [142,1,142,34,'dccv']
-, [6,1,6,26,'dccv']
-, [143,2,143,114,'dccv']
-, [144,2,144,126,'dccv']
-, [148,1,148,34,'dccv']
-, [6,1,6,26,'dccv']
-, [149,2,150,2,'dccv']
-, [150,122,150,129,'dccv']
-, [150,2,150,122,'dccv']
-, [151,2,151,126,'dccv']
-, [155,1,155,34,'dccv']
-, [6,1,6,26,'dccv']
-, [156,2,156,211,'dccv']
-, [157,2,157,120,'dccv']
-, [158,2,158,187,'dccv']
-, [167,1,167,34,'dccv']
-, [6,1,6,26,'dccv']
-, [168,2,168,111,'dccv']
-, [169,2,169,126,'dccv']
-, [173,1,173,34,'dccv']
-, [6,1,6,26,'dccv']
-, [174,2,175,2,'dccv']
-, [175,124,175,145,'dccv']
-, [175,2,175,124,'dccv']
-, [176,2,176,113,'dccv']
-, [178,1,178,34,'dccv']
-, [6,1,6,26,'dccv']
-, [179,2,180,2,'dccv']
-, [180,122,180,142,'dccv']
-, [180,2,180,122,'dccv']
-, [181,2,181,126,'dccv']
-, [184,2,185,112,'dccv']
-];
-		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
-	</head><body>
-		<code id="src6" class="dotCoverSource"><pre>Feature: HBase Stargate Client
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>c:\projects\github\wesam18\hbase-client\src\_specs\features\hbasestargateclient.feature</title>
+    <script type="text/javascript" src="../js/dotcover.sourceview.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/dotcover.report.css" />
+  </head>
+  <body>
+    <pre id="content" class="source-code">
+Feature: HBase Stargate Client
 	In order to read and write HBase data
 	As an application developer
 	I want access to all available REST operations on HBase Stargate via a managed client API
@@ -164,7 +69,7 @@ Scenario: Write multiple values
 		| 1   | beta   | z         | lorum ipsum |
 
 Scenario Outline: Read a row
-	Given I have a cell query consisting of a &lt;table&gt;, a &lt;row&gt;, a &lt;column&gt;, a &lt;qualifier&gt;, a &lt;begin&gt; timestamp, a &lt;end&gt; timestamp, and a &lt;max&gt; number of results
+	Given I have a cell query consisting of a &lt;table&gt;, a &lt;row&gt;, a &lt;column&gt;, a &lt;qualifier&gt;, a &lt;begin&gt; timestamp, a &lt;end&gt; timestamp, and a &lt;max&gt; number of versions
 	When I read a row using my query
 	Then a REST request should have been submitted with the correct &lt;method&gt; and &lt;resource&gt;
 Examples:
@@ -286,8 +191,10 @@ Scenario: No Server Response
 	Then a REST request should have been submitted with the following values:
 		| method | resource    |
 		| GET    | test/schema |
-	And there should have been a WebException with a message equivalent to the resource called &quot;NoServerResponse&quot;</pre></code><script type="text/javascript">
-			applyranges('src6', RANGES_6)
-		</script>
-	</body>
+	And there should have been a WebException with a message equivalent to the resource called &quot;NoServerResponse&quot;
+    </pre>
+    <script type="text/javascript">
+      highlightRanges([[7,2,8,69,1],[10,2,10,142,1],[11,2,11,104,1],[13,1,13,34,1],[6,1,6,26,1],[14,2,14,119,1],[15,2,15,149,1],[16,2,16,159,1],[17,2,17,122,1],[18,2,18,150,1],[19,2,20,2,1],[20,2,20,176,1],[21,2,21,178,1],[30,1,30,34,1],[6,1,6,26,1],[31,2,31,215,1],[32,2,32,137,1],[33,2,33,187,1],[34,2,34,127,1],[35,2,35,160,1],[43,1,43,34,1],[6,1,6,26,1],[44,2,44,138,1],[45,2,45,114,1],[50,2,50,108,1],[51,2,51,125,1],[54,2,54,128,1],[55,2,55,122,1],[61,1,61,34,1],[6,1,6,26,1],[62,2,63,2,1],[63,111,63,184,1],[63,2,63,111,1],[64,2,64,187,1],[100,1,100,34,1],[6,1,6,26,1],[101,2,101,197,1],[102,2,102,125,1],[103,2,103,187,1],[109,1,109,34,1],[6,1,6,26,1],[110,2,111,2,1],[111,124,111,134,1],[111,2,111,124,1],[112,2,112,121,1],[116,1,116,34,1],[6,1,6,26,1],[117,2,118,2,1],[118,2,118,125,1],[119,2,119,125,1],[122,2,122,146,1],[124,1,124,34,1],[6,1,6,26,1],[125,2,125,142,1],[126,2,127,2,1],[127,116,127,132,1],[127,2,127,116,1],[128,2,128,125,1],[131,2,131,119,1],[135,1,135,34,1],[6,1,6,26,1],[136,2,136,142,1],[137,2,137,104,1],[138,2,138,125,1],[142,1,142,34,1],[6,1,6,26,1],[143,2,143,114,1],[144,2,144,126,1],[148,1,148,34,1],[6,1,6,26,1],[149,2,150,2,1],[150,122,150,129,1],[150,2,150,122,1],[151,2,151,126,1],[155,1,155,34,1],[6,1,6,26,1],[156,2,156,211,1],[157,2,157,120,1],[158,2,158,187,1],[167,1,167,34,1],[6,1,6,26,1],[168,2,168,111,1],[169,2,169,126,1],[173,1,173,34,1],[6,1,6,26,1],[174,2,175,2,1],[175,124,175,145,1],[175,2,175,124,1],[176,2,176,113,1],[178,1,178,34,1],[6,1,6,26,1],[179,2,180,2,1],[180,122,180,142,1],[180,2,180,122,1],[181,2,181,126,1],[184,2,185,112,1]]);
+    </script>
+  </body>
 </html>

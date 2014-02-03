@@ -1,57 +1,14 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<script type="text/javascript" src="../js/coverreport.js">
-
-		</script><script type="text/javascript">
-			RANGES_42 = [
-   [168,3,168,4,'dccv']
-, [169,4,169,48,'dccv']
-, [169,77,169,79,'dccv']
-, [170,4,170,17,'dccv']
-, [171,4,171,5,'dccv']
-, [172,5,172,47,'dccv']
-, [173,4,173,5,'dccv']
-, [174,3,174,4,'dccv']
-, [169,48,169,77,'dccv']
-, [49,3,49,4,'dcuc']
-, [50,4,50,98,'dcuc']
-, [51,3,51,4,'dcuc']
-, [65,3,65,4,'dcuc']
-, [66,4,66,86,'dcuc']
-, [67,3,67,4,'dcuc']
-, [80,3,80,4,'dcuc']
-, [81,4,81,91,'dcuc']
-, [82,3,82,4,'dcuc']
-, [94,3,94,4,'dcuc']
-, [95,4,95,79,'dcuc']
-, [96,3,96,4,'dcuc']
-, [109,3,109,4,'dcuc']
-, [110,4,110,90,'dcuc']
-, [111,3,111,4,'dcuc']
-, [123,3,123,4,'dcuc']
-, [124,4,124,85,'dcuc']
-, [125,3,125,4,'dcuc']
-, [140,3,140,4,'dcuc']
-, [141,4,141,116,'dcuc']
-, [142,3,142,4,'dcuc']
-, [157,3,157,4,'dcuc']
-, [158,4,158,111,'dcuc']
-, [159,3,159,4,'dcuc']
-, [182,3,182,4,'dcuc']
-, [183,4,183,69,'dcuc']
-, [184,4,184,61,'dcuc']
-, [185,4,185,33,'dcuc']
-, [186,3,186,4,'dcuc']
-, [189,3,189,4,'dcuc']
-, [190,4,200,6,'dcuc']
-, [201,3,201,4,'dcuc']
-, [204,3,204,4,'dcuc']
-, [205,4,220,6,'dcuc']
-, [221,3,221,4,'dcuc']
-];
-		</script><link rel="stylesheet" type="text/css" href="../css/coverreport.css" />
-	</head><body>
-		<code id="src42" class="dotCoverSource"><pre>#region FreeBSD
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>c:\projects\github\wesam18\hbase-client\src\hbase.stargate.client\api\extensions.cs</title>
+    <script type="text/javascript" src="../js/dotcover.sourceview.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/dotcover.report.css" />
+  </head>
+  <body>
+    <pre id="content" class="source-code">
+#region FreeBSD
 
 // Copyright (c) 2013, The Tribe
 // All rights reserved.
@@ -187,11 +144,11 @@ namespace HBase.Stargate.Client.Api
 		/// &lt;param name=&quot;qualifier&quot;&gt;The qualifier.&lt;/param&gt;
 		/// &lt;param name=&quot;beginTimestamp&quot;&gt;The begin timestamp (inclusive).&lt;/param&gt;
 		/// &lt;param name=&quot;endTimestamp&quot;&gt;The end timestamp (exclusive).&lt;/param&gt;
-		/// &lt;param name=&quot;maxResults&quot;&gt;The maximum number of results to return.&lt;/param&gt;
+		/// &lt;param name=&quot;maxVersions&quot;&gt;The maximum number of versions to return.&lt;/param&gt;
 		public static Task&lt;CellSet&gt; FindCellsAsync(this IStargate gate, string table, string row = null, string column = null, string qualifier = null,
-			long? beginTimestamp = null, long? endTimestamp = null, int? maxResults = null)
+			long? beginTimestamp = null, long? endTimestamp = null, int? maxVersions = null)
 		{
-			return gate.FindCellsAsync(BuildQuery(table, row, column, qualifier, beginTimestamp, endTimestamp, maxResults));
+			return gate.FindCellsAsync(BuildQuery(table, row, column, qualifier, beginTimestamp, endTimestamp, maxVersions));
 		}
 
 		/// &lt;summary&gt;
@@ -204,11 +161,11 @@ namespace HBase.Stargate.Client.Api
 		/// &lt;param name=&quot;qualifier&quot;&gt;The qualifier.&lt;/param&gt;
 		/// &lt;param name=&quot;beginTimestamp&quot;&gt;The begin timestamp (exclusive).&lt;/param&gt;
 		/// &lt;param name=&quot;endTimestamp&quot;&gt;The end timestamp (exclusive).&lt;/param&gt;
-		/// &lt;param name=&quot;maxResults&quot;&gt;The maximum versions to return.&lt;/param&gt;
+		/// &lt;param name=&quot;maxVersions&quot;&gt;The maximum versions to return.&lt;/param&gt;
 		public static CellSet FindCells(this IStargate gate, string table, string row = null, string column = null, string qualifier = null,
-			long? beginTimestamp = null, long? endTimestamp = null, int? maxResults = null)
+			long? beginTimestamp = null, long? endTimestamp = null, int? maxVersions = null)
 		{
-			return gate.FindCells(BuildQuery(table, row, column, qualifier, beginTimestamp, endTimestamp, maxResults));
+			return gate.FindCells(BuildQuery(table, row, column, qualifier, beginTimestamp, endTimestamp, maxVersions));
 		}
 
 		/// &lt;summary&gt;
@@ -253,7 +210,7 @@ namespace HBase.Stargate.Client.Api
 			};
 		}
 
-		private static CellQuery BuildQuery(string table, string row, string column, string qualifier, long? beginTimestamp, long? endTimestamp, int? maxResults)
+		private static CellQuery BuildQuery(string table, string row, string column, string qualifier, long? beginTimestamp, long? endTimestamp, int? maxVersions)
 		{
 			return new CellQuery
 			{
@@ -269,12 +226,14 @@ namespace HBase.Stargate.Client.Api
 				},
 				BeginTimestamp = beginTimestamp,
 				EndTimestamp = endTimestamp,
-				MaxResults = maxResults
+				MaxVersions = maxVersions
 			};
 		}
 	}
-}</pre></code><script type="text/javascript">
-			applyranges('src42', RANGES_42)
-		</script>
-	</body>
+}
+    </pre>
+    <script type="text/javascript">
+      highlightRanges([[168,3,168,4,1],[169,4,169,48,1],[169,77,169,79,1],[170,4,170,17,1],[171,4,171,5,1],[172,5,172,47,1],[173,4,173,5,1],[174,3,174,4,1],[169,48,169,77,1],[49,3,49,4,0],[50,4,50,98,0],[51,3,51,4,0],[65,3,65,4,0],[66,4,66,86,0],[67,3,67,4,0],[80,3,80,4,0],[81,4,81,91,0],[82,3,82,4,0],[94,3,94,4,0],[95,4,95,79,0],[96,3,96,4,0],[109,3,109,4,0],[110,4,110,90,0],[111,3,111,4,0],[123,3,123,4,0],[124,4,124,85,0],[125,3,125,4,0],[140,3,140,4,0],[141,4,141,117,0],[142,3,142,4,0],[157,3,157,4,0],[158,4,158,112,0],[159,3,159,4,0],[182,3,182,4,0],[183,4,183,69,0],[184,4,184,61,0],[185,4,185,33,0],[186,3,186,4,0],[189,3,189,4,0],[190,4,200,6,0],[201,3,201,4,0],[204,3,204,4,0],[205,4,220,6,0],[221,3,221,4,0]]);
+    </script>
+  </body>
 </html>
